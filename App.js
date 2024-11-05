@@ -7,6 +7,8 @@ import SettingsScreen from "./src/screens/SettingsScreen";
 import SignInScreen from "./src/screens/SignInScreen";
 import SignUpScreen from "./src/screens/SignUpScreen";
 import AICounselingScreen from "./src/screens/AICounselingScreen"; 
+import MapScreen from "./src/screens/MapScreen"; 
+
 
 
 const Tab = createBottomTabNavigator();
@@ -30,6 +32,7 @@ function MainTabs({ setIsSignedIn }) {
     <Tab.Navigator>
       <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Counseling" component={AICounselingScreen} />
+      <Tab.Screen name="Memory map" component={MapScreen} />
       <Tab.Screen name="Settings">
         {(props) => <SettingsScreen {...props} setIsSignedIn={setIsSignedIn} />}
       </Tab.Screen>
